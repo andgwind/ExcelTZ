@@ -1,3 +1,36 @@
+## Laravel Test Task
+
+- Create a Laravel project in a Git repository (you can use any public service, such as GitHub). The initial commit should contain the clean Laravel framework, followed by the implementation of the task.
+- Implement a controller with validation for uploading an Excel file.
+- Secure access to the upload controller with basic authorization.
+- Parse the uploaded file into the database (table: rows) in stages (1000 rows at a time) using jobs.
+- Store the parsing progress in Redis (unique key + number of processed rows).
+- Excel fields:
+- id
+- name
+- date (d.m.Y)
+- You can use any package from Composer for Excel parsing, except for maatwebsite/excel.
+- Implement a controller to display the imported data (rows) with grouping by date (two-dimensional array).
+- It would be a plus if you implement the transmission of an event via Laravel Echo when creating a record in rows.
+- Writing tests would be a plus.
+
+## Laravel тестовое задание 
+
+- Создать laravel-проект в git-репозитории (подойдет любой публичный сервис, например github). Первым коммитом залить чистый фреймворк, следом — реализацию задания.
+- Реализовать контроллер с валидацией и загрузкой excel файла.
+- Доступ к контроллеру загрузки закрыть basic-авторизацией.
+- Загруженный файл через jobs поэтапно (по 1000 строк) парсить в БД (таблица rows).
+- Прогресс парсинга файла хранить в redis (уникальный ключ + количество обработанных строк).
+- Поля excel: 
+id
+name
+date (d.m.Y)
+- Для парсинга excel можете использовать любой пакет из composer, за исключением maatwebsite/excel
+- Реализовать контроллер для вывода импортированных данных (rows) с группировкой по date - двумерный массив
+- Будет плюсом если вы реализуете через laravel echo передачу event-а на создание записи в rows
+- Будет плюсом написание тестов
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
